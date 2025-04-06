@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+      
+  pull_request:
+    branches:
+      - main
+      - develop
+
   workflow_dispatch:
 
 jobs:
@@ -19,7 +25,7 @@ jobs:
     - name: Log in to GitHub Container Registry
       run: echo "${{ secrets.TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-    # Step 3: Build Docker image (Single-Stage Dockerfile)
+    # Step 3: Build Docker image
     - name: Build Docker image
       run: docker build -t ghcr.io/${{ github.actor }}/learning-github-cotainer-registry-api:latest .
 
