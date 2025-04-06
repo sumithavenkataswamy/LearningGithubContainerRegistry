@@ -1,0 +1,6 @@
+@LearningGithubContainerRegistry_HostAddress = http://localhost:5287
+
+GET {{LearningGithubContainerRegistry_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
