@@ -1,5 +1,6 @@
 namespace LearningGithubContainerRegistry
 {
+    // Added comments
     public class WeatherForecast
     {
         public DateOnly Date { get; set; }
